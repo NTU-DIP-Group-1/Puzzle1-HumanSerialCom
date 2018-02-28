@@ -21,11 +21,11 @@ void setup()
 //Main loop
 void loop() 
 {
-  if (serial_pin.available())
+  while (serial_pin.available())
   {
-    String input_string = serial_URL.read();
-    Serial.write(input_string);
-    lcd.print(input_string);
+    char input = serial_pin.read();
+    Serial.write(input);
+    lcd.print(input);
   }
 }
 
