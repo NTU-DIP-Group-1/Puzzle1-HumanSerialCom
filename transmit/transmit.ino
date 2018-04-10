@@ -7,7 +7,7 @@ int pin_button = 2;
 
 
 //Definitions
-String code = "1234.";
+String code = "6824.";
 SoftwareSerial serial_pin(pin_null, pin_serial); //Rx, Tx. (RX not used)
 
 //Setup
