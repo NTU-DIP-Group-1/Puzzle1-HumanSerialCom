@@ -35,12 +35,6 @@ void loop()
       serial_pin.write(buf);
       Serial.print(buf);
       delay(1000);
-      serial_pin.write(buf);
-      Serial.print(buf);
-      delay(1000);
-      serial_pin.write(buf);
-      Serial.print(buf);
-      delay(1000);
     }
   }
 }
