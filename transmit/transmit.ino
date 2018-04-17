@@ -22,16 +22,22 @@ void setup()
 void loop() 
 {
   //if button is pressed
-  if (!digitalRead(pin_button))
+  if (digitalRead(pin_button))
   { 
     Serial.print("Button Pressed");
-    Serial.print(!digitalRead(pin_button));
+    Serial.print(digitalRead(pin_button));
     char buf[10];
     code.toCharArray(buf, 10);
 
     //while button is down, code is sent every second
-    while (!digitalRead(pin_button))
+    while (digitalRead(pin_button))
     {
+      serial_pin.write(buf);
+      Serial.print(buf);
+      delay(1000);
+      serial_pin.write(buf);
+      Serial.print(buf);
+      delay(1000);
       serial_pin.write(buf);
       Serial.print(buf);
       delay(1000);
